@@ -1,4 +1,4 @@
-# This repository gives some educational/research materials through documented code:
+### This repository gives some educational/research materials through documented code:
 * IPython Notebooks
 * Matlab source code
 
