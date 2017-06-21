@@ -1,0 +1,33 @@
+\frametitle{Serveur: Tiny YOLO}
+\begin{minipage}[c]{.35\linewidth}
+Extrait de code :
+\small{
+\begin{verbatim}
+model = Sequential()
+model.add(Conv2D(filters=16,
+       kernel_size=(3, 3),
+       input_shape=(3, 448, 448))
+model.add(LeakyReLU(alpha=0.1))
+model.add(MaxPooling2D(pool_size=(2,2)))
+...
+model.add(Dense(1470))
+
+model.load('params.hdf5')
+y_pred = model.predict(x)
+\end{verbatim}
+}
+   \end{minipage}
+   \hfill
+   \begin{minipage}[r]{.48\linewidth}
+   \begin{flushright}
+ \includegraphics[width=0.73\textwidth]{images/YOLO_params.pdf}
+\end{flushright}
+   \end{minipage}
+\pause
+\begin{alertblock}{En résumé, Tiny Yolo c'est :}
+\begin{itemize}
+\visible<2->{\item $x: 448 \times 448 \times 3 = 602.112$ prédicteurs}
+\visible<3->{\item $y: 1470$ variables à prédire (suivant nombre de classes)}
+\visible<4->{\item et $45.089.374$ paramètres !!!}
+\end{itemize}
+\end{alertblock}
