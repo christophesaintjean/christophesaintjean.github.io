@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Archives{% endblock %}
+{% block content %}
+    <article itemscope itemtype="http://schema.org/WebPage">
+        <div class="eevee-page-spacer" role="presentation"></div>
+        <div class="eevee-page" itemprop="mainContentOfPage">
+            {% include 'partials/archive_year.html' %}
+        </div>
+    </article>
+{% endblock %}

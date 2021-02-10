@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}404{%endblock%}
+{% block content %}
+    <div class="eevee-padding">
+        <h2>404</h2>
+        <section class="post-content">
+            <p>Page not found.</p>
+            <p>
+                <a href="{{ SITEURL }}" itemprop="url">
+                    Go back to the {{ SITENAME }} homepage.
+                </a>
+            </p>
+        </section>
+    </div>
+{% endblock %}
